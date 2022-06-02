@@ -5,6 +5,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .layout {
@@ -63,12 +64,12 @@ li:nth-of-type(7) {
 }
 
 .search {
-    width: 80vw;
-    height: 20vh;
+    /*width: 80vw;
+    height: 20vh;*/
     background-color: #F7F7F7;  
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.25fr 1fr;
     align-items: center;
     padding: 20px;
     box-shadow: 2px 2px 5px black;
@@ -137,13 +138,14 @@ div button {
 }
 
 .profile {
-    width: 80vw;
-    height: 80vh;
-    background-color: #F7F7F7;
+    /*width: 80vw;
+    height: 80vh;*/
     margin: 10px;
     display: grid;
     grid-template-columns: 1.25fr 1.25fr 1fr;
-    grid-template-rows: 0.25fr repeat(6, 1fr);
+    grid-template-rows: 0.25fr 1fr 0.25fr repeat(4, 1fr);
+    column-gap: 10px;
+    align-content: flex-start;
 }
 
 h2:first-of-type {
@@ -151,5 +153,73 @@ h2:first-of-type {
 }
 
 .projects {
-    grid-area: 2 / 1 / -1 / 3;
+    grid-area: 2 / 1 / -1 / 3; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(30px, 0.15fr));*/
+    align-content: flex-start;
+    gap: clamp(15px, 1.1rem, 20px);
+
+}
+
+.card {
+    margin: 0;
+    padding: 0;
+    border: 2px solid black;
+    height: clamp(40px, 20vh, 200px);
+    width: clamp(80px, 40vh, 400px);
+    background-color: #F7F7F7;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+h2:nth-of-type(2) {
+    /*grid-area: 1 / 3 / 2 / 4;*/
+}
+
+.card h6,
+.card p {
+    margin: 5px 0 0;
+}
+
+.announcements {
+    /*grid-area: 2 / 3 / 5 / 4;*/
+    border: 1px solid black;
+    background-color: #F7F7F7;
+    padding: 10px;
+}
+
+
+.announcements h6,
+.announcements p {
+    margin: 5px 0 0;
+}
+
+
+h2:last-of-type {
+    /*grid-area: 5 / 3 / 6 / 4;*/
+}
+
+.trending {
+    /*grid-area: 6 / 3 / 8 / 4;*/
+    border: 1px solid black;
+    background-color: #F7F7F7;
+    padding: 10px;
+}
+
+.trending img {
+    width: 35px;
+    height: 35px;
+}
+
+.trending > div {
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
+}
+
+.trending p {
+    margin: 5px 0 0;
 }
